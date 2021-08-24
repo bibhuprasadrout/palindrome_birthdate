@@ -1,5 +1,4 @@
 const birthDate = document.querySelector('.date-input')
-const calculate = document.querySelector('.calculate')
 const palindromeBirthdate = document.querySelector('.palindrome-birthday-message')
 const simpleBirthdatePast = document.querySelector('.difference-message-past')
 const simpleBirthdateFuture = document.querySelector('.difference-message-future')
@@ -7,6 +6,8 @@ const daysMissed = document.querySelector('.missed-days')
 const daysToWait = document.querySelector('.countdown')
 const pastPalindromeDate = document.querySelector('.past-palindrome-date')
 const futurePalindromeDate = document.querySelector('.future-palindrome-date')
+const calculate = document.querySelector('.calculate')
+const reset = document.querySelector('.reset')
 
 let missedDays = 0
 let waitForDays = 0
@@ -79,5 +80,18 @@ function nearestFuturePalindromeFinder(dateValue) {
 calculate.addEventListener('click', function () {
   if(birthDate && birthDate.value) {
     stringConverter(birthDate)
+  } else {
+    palindromeBirthdate.classList.remove('hidden')
+    palindromeBirthdate.classList.add('visible')
+    palindromeBirthdate.innerText = 'Enter a valid Birthdate.'
   }
+})
+
+reset.addEventListener('click', function() {
+  palindromeBirthdate.classList.remove('visible')
+  palindromeBirthdate.classList.add('hidden')
+  simpleBirthdatePast.classList.remove('visible')
+  simpleBirthdatePast.classList.add('hidden')
+  simpleBirthdateFuture.classList.remove('visible')
+  simpleBirthdateFuture.classList.add('hidden')
 })

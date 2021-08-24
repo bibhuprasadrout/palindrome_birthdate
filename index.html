@@ -8,18 +8,23 @@
   <link rel="stylesheet" href="./css/index.css">
 </head>
 <body>
-  <h1>Palindrome Birthdate</h1>
   <section class="app">
+    <section class="banner-section">
+      <h1>Palindrome Birthdate</h1>
+    </section>
     <form class="birthdate">
       <label class="date-label">
         Enter your Birthdate : 
         <input class="date-input" type="date">
       </label>
-      <input type="button" class="calculate" value="Calculate">
+      <div class="buttons">
+        <input type="button" class="calculate" value="Calculate">
+        <input type="reset" class="reset" value="Reset">
+      </div>
     </form>
-    <p class="palindrome-birthday-message hidden">You were born on a palindrome birthdate.</p>
-    <p class="difference-message-past hidden">It does not seem that you were born on a palindrome birthdate, you had missed it by <span class="missed-days"></span> days. The date is <span class="past-palindrome-date"></span>.</p>
-    <p class="difference-message-future hidden">Just in case, the next palindrome date is after <span class="countdown"></span> days.The date is <span class="future-palindrome-date"></span>.</p>
+    <p class="palindrome-birthday-message message hidden">You were born on a palindrome birthdate.</p>
+    <p class="difference-message-past message hidden">It does not seem that you were born on a palindrome birthdate, you had missed it by <span class="missed-days"></span> days. The date is <span class="past-palindrome-date"></span>.</p>
+    <p class="difference-message-future message hidden">Just in case, the next palindrome date is after <span class="countdown"></span> days.The date is <span class="future-palindrome-date"></span>.</p>
   </section>
   <script src="./js/index.js"></script>
 </body>
